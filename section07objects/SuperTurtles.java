@@ -1,6 +1,7 @@
 package org.teachingkidsprogramming.section07objects;
 
 import org.teachingextensions.WindowUtils.MultiTurtleWindow;
+import org.teachingextensions.logo.Turtle;
 
 public class SuperTurtles
 {
@@ -18,6 +19,7 @@ public class SuperTurtles
     //  makeSpeedyTurtle (recipe below) --#2.0
     //  ------------- Recipe for makeSpeedyTurtle --#1.0
     //        Create a new speedyTurtle instance  
+    Turtle turtle = new Turtle.show();
     //        Add your speedyTurtle to your MultiTurtleWindow
     //        Set the speed of your speedyTurtle to the fastest possible    
     //        Have your speedyTurtle draw a triangle with 100 pixel sides

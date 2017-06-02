@@ -1,5 +1,7 @@
 package org.teachingkidsprogramming.section06modelviewcontroller;
 
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
+
 public class AdLibs
 {
   public static void main(String[] args)

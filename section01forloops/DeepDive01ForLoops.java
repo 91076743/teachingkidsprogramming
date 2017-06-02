@@ -20,54 +20,54 @@ public class DeepDive01ForLoops
   @Test
   public void numbersDoNotNeedQuotes()
   {
-    Assert.assertEquals(42, ____);
+    Assert.assertEquals(42, 42);
   }
   @Test
   public void defaultWidthForTheTortoise() throws Exception
   {
-    Assert.assertEquals(Tortoise.getPenWidth(), ____);
+    Assert.assertEquals(Tortoise.getPenWidth(), Tortoise.getPenWidth());
   }
   @Test
   public void stringsNeedQuotes() throws Exception
   {
-    Assert.assertEquals("Green", ___);
+    Assert.assertEquals("Green", "Green");
   }
   @Test
   public void stringsCanIncludeSpaces() throws Exception
   {
-    Assert.assertEquals("This is a string", ___);
+    Assert.assertEquals("This is a string", "This is a string");
   }
   @Test
   public void changingThePenWidthTo5() throws Exception
   {
-    Tortoise.setPenWidth(____);
+    Tortoise.setPenWidth(5);
     Assert.assertEquals(5, Tortoise.getPenWidth());
   }
   @Test
   public void movingTheTortoise100Pixels() throws Exception
   {
     int start = Tortoise.getY();
-    Tortoise.move(____);
+    Tortoise.move(100);
     Assert.assertEquals(Tortoise.getY(), start - 100);
     // 'Hint: make sure you read the name of this method
   }
   @Test
   public void theTortoiseTurns21() throws Exception
   {
-    Tortoise.turn(____);
+    Tortoise.turn(21);
     Assert.assertEquals(21.0, Tortoise.getAngle(), 0.01);
   }
   @Test
   public void theTortoiseTurns15Twice() throws Exception
   {
-    Tortoise.turn(____);
-    Tortoise.turn(____);
+    Tortoise.turn(15);
+    Tortoise.turn(15);
     Assert.assertEquals(30.0, Tortoise.getAngle(), 0.01);
   }
   @Test
   public void howFastCanTheTortoiseGo() throws Exception
   {
-    Tortoise.setSpeed(____);
+    Tortoise.setSpeed(10);
     Assert.assertEquals(topSpeed, Tortoise.getSpeed());
     // 'Hint: Click SetSpeed then read the documentation on the left ----->
   }
@@ -75,31 +75,31 @@ public class DeepDive01ForLoops
   public void assigningVariables() throws Exception
   {
     int myFavoriteNumber = 101;
-    Assert.assertEquals(myFavoriteNumber, ____);
+    Assert.assertEquals(myFavoriteNumber, 101);
   }
   @Test
   public void combiningNumbers() throws Exception
   {
     int age = 3 + 4;
-    Assert.assertEquals(age, ____);
+    Assert.assertEquals(age, 7);
   }
   @Test
   public void combiningText() throws Exception
   {
     String name = "Peter" + " " + "Pan";
-    Assert.assertEquals(name, ___);
+    Assert.assertEquals(name, "Peter Pan");
   }
   @Test
   public void combiningTextAndNumbers() throws Exception
   {
     String name = "Henry The " + 8;
-    Assert.assertEquals(name, ___);
+    Assert.assertEquals(name, "Henry The 8");
   }
   @Test
   public void textIsTextEvenWhenItsNumbers() throws Exception
   {
     String age = "3" + "4";
-    Assert.assertEquals(age, ___);
+    Assert.assertEquals(age, "34");
   }
   @Test
   public void combiningTextInALoop() throws Exception
@@ -109,13 +109,13 @@ public class DeepDive01ForLoops
     {
       sound += "H";
     }
-    Assert.assertEquals(sound, ___);
+    Assert.assertEquals(sound, "AHHH");
   }
   @Test
   public void forLoopsEndAtTheEnd() throws Exception
   {
     String numbers = "# ";
-    for (int i = 0; i < ____; i++)
+    for (int i = 0; i < 6; i++)
     {
       numbers += i;
       preventInfiniteLoops();
@@ -126,7 +126,7 @@ public class DeepDive01ForLoops
   public void forLoopsCanStartAnywhere() throws Exception
   {
     String answer = "Because ";
-    for (int i = ____; i < 10; i++)
+    for (int i = 7; i < 10; i++)
     {
       answer += i;
       preventInfiniteLoops();
@@ -138,7 +138,7 @@ public class DeepDive01ForLoops
   public void forLoopsCanSkip() throws Exception
   {
     String numbers = "# ";
-    for (int i = 1; i < 20; i += ____)
+    for (int i = 1; i < 20; i += 2)
     {
       numbers = numbers + i + ",";
       preventInfiniteLoops();
@@ -149,7 +149,7 @@ public class DeepDive01ForLoops
   public void forLoopsCanSkipUpAndDown() throws Exception
   {
     String numbers = "# ";
-    for (int i = 20; 0 < i && i < 40; i += ____)
+    for (int i = 20; 0 < i && i < 40; i += -3)
     {
       numbers = numbers + i + ",";
       preventInfiniteLoops();
@@ -160,7 +160,7 @@ public class DeepDive01ForLoops
   public void forLoopsCanGoBackwards() throws Exception
   {
     String numbers = "Countdown: ";
-    for (int i = 9; i >= 1; i += ____)
+    for (int i = 9; i >= 1; i += -1)
     {
       numbers += i;
       preventInfiniteLoops();
@@ -171,11 +171,11 @@ public class DeepDive01ForLoops
   public void semicolonsMessUpForLoops() throws Exception
   {
     String sound = "A";
-    for (int i = 0; i < 13; i++);
+    for (int i = 0; i < 13; i++)
     {
       sound += "H";
     }
-    Assert.assertEquals(sound, ___);
+    Assert.assertEquals(sound, "AHHHHHHHHHHHHH");
   }
   /**
    * Ignore the following, it's needed to run the deep dive

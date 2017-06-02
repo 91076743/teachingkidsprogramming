@@ -3,22 +3,27 @@ package org.teachingkidsprogramming.section06modelviewcontroller;
 import org.teachingkidsprogramming.recipes.quizzes.graders.AdLibsQuizAdapter;
 import org.teachingkidsprogramming.recipes.quizzes.graders.AdLibsQuizGrader;
 
+import com.sun.javafx.scene.paint.GradientUtils.Parser;
+
 public class AdLibsQuiz extends AdLibsQuizAdapter
 {
   @Override
   public void question1(String letter1, String letter3)
   {
     //  Set current value of word1 to be letter1 + 'o' + letter3
+    word1 = letter1 + 'o' + letter3;
   }
   @Override
   public void question2(String letter1)
   {
     //  Add the letter1 to the end of word2 
+    word2 = word2 + letter1;
   }
   @Override
   public void question3(String templateText, Object model)
   {
     //  Use the parser to combine the template and the model as word3
+  word3 = 
   }
   @Override
   public void question4(Pieces pieces)

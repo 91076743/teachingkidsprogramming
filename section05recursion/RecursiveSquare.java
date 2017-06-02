@@ -12,22 +12,12 @@ public class RecursiveSquare
     Tortoise.setPenColor(PenColors.Yellows.Gold);
     //
     //  Set the speed to the fastest --#8
-    //  Update the length to 100.0 --#1.1
-    double length = 50.0;
+    double length = 100.0;
     //  MakeASquare with the current length(recipe below) --#11.4
     //
     //  Create the makeASquare recipe --#11.1
     //  If the current length is greater than 10 --#10.2
-    //      Run the recipe moveToTheSquareStart with the current length  --#4.3
-    //
-    //      Create the moveToTheSquareStart recipe  --#4.1
-    //          Set the pen up for the tortoise --#1.2
-    //          Move the tortoise the current length divided by two --#1.3
-    //          Turn the tortoise 90 degrees to the left --#2.1
-    //          Move the tortoise the current length divided by two --#2.2
-    //          Turn the tortoise 180 degrees to the right --#3.1
-    //          Set the pen down for the tortoise --#3.2
-    //      End of moveToTheSquareStart recipe  --#4.2
+    moveToTheSquareStart(length);
     //
     //  Do the following 4 times --#7.1
     //    Move the Tortoise the current length --#6.2
@@ -36,8 +26,13 @@ public class RecursiveSquare
     //          Turn the tortoise 90 degrees to the right --#6.1
     //  Repeat --#7.2
     //
-    //  MoveBackToCenter with the current length (recipe below)--#5.3
-    //  Create the moveBackToCenter recipe --#5.1
+    moveBackToCenter(length);
+    //  Set the current length to the current length times two --#10.1
+    //
+    //  End of makeASquare recipe --#11.2
+  }
+  private static void moveBackToCenter(double length)
+  {
     Tortoise.setPenUp();
     Tortoise.turn(90);
     Tortoise.move(length / 2);
@@ -45,12 +40,14 @@ public class RecursiveSquare
     Tortoise.move(length / 2);
     Tortoise.turn(180);
     Tortoise.setPenDown();
-    //
-    //
-    //  End of moveBackToCenter recipe--#5.2
-    //
-    //  Set the current length to the current length times two --#10.1
-    //
-    //  End of makeASquare recipe --#11.2
+  }
+  private static void moveToTheSquareStart(double length)
+  {
+    Tortoise.setPenUp();
+    Tortoise.move(length / 2);
+    Tortoise.turn(-90);
+    Tortoise.move(length / 2);
+    Tortoise.turn(180);
+    Tortoise.setPenDown();
   }
 }

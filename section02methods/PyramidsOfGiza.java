@@ -9,6 +9,7 @@ public class PyramidsOfGiza
   {
     setUpPyramidLand();
     //  Turn the tortoise 90 degrees to the left 
+    Tortoise.turn(-90);
     //  Move the tortoise 220 pixels
     //  Turn the tortoise 135 degrees to the right 
     //  Move the tortoise 100 pixels
